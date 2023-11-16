@@ -39,7 +39,7 @@ public class FaviconConfiguration {
                 = new ResourceHttpRequestHandler();
         ClassPathResource classPathResource
                 = new ClassPathResource("src/resources");
-        List<Resource> locations = List.of(classPathResource);
+        List<Resource> locations = Arrays.asList(classPathResource);
         requestHandler.setLocations(locations);
         return requestHandler;
     }

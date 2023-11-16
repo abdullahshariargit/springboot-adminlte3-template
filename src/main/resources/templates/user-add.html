@@ -53,6 +53,16 @@
                                            type="text" th:field="*{username}" required>
                                 </div>
                                 <div class="form-group">
+                                    <label for="cronjob">Cronjob</label>
+<!--                                        <input class="form-control" id="cronjob" placeholder="Enter username"-->
+<!--                                           type="text" th:field="*{cronJob}" required>-->
+
+                                    <select name="cronJob" id="cronjob" class="form-control">
+                                        <option th:each="cron : ${T(com.hendisantika.entity.CronJobExpression).values()}"
+                                                th:value="${cron.getExpression()}" th:text="${cron}"></option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label for="password">Password</label>
                                     <input class="form-control" id="password" placeholder="Enter Password"
                                            type="password" th:field="*{password}">
